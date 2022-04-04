@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import fetchMovies, { fetchPopular } from "./fetch";
 
 export default function SearchMovies({ setMovies }) {
 	const [query, setQuery] = useState("");
 
+	useEffect(() => {
+		fetchPopular(setMovies);
+	}, [query, setMovies]);
+
 	const searchMovies = async (e) => {
 		e.preventDefault();
-
-		const url = `https://api.themoviedb.org/3/search/movie?api_key=11097d4989e6947066c1928625606ba8&language=en-US&query=${query}&include_adult=false`;
-
-		try {
-			const res = await fetch(url);
-			const data = await res.json();
-			setMovies(data.results);
-		} catch (err) {
-			console.error(err);
-		}
+		fetchMovies(query, setMovies);
 	};
 
 	return (
