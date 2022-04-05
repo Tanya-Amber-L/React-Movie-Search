@@ -7,7 +7,7 @@ import MoviePreview from "./components/moviePreview";
 function App() {
 	const [movies, setMovies] = useState([]);
 	return (
-		<div className="container">
+		<main>
 			<h1 className="title">React Movie Search</h1>
 			<SearchMovies setMovies={setMovies} />
 			<div className="card-list">
@@ -17,7 +17,7 @@ function App() {
 						<MoviePreview movie={movie} />
 					))}
 			</div>
-		</div>
+		</main>
 	);
 }
 
