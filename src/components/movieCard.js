@@ -1,7 +1,13 @@
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie, setShowCard }) {
 	return (
 		<div className="card" key={movie.id}>
-			{console.log(movie)}
+			<img
+				alt="close card button"
+				src="../close.png"
+				onClick={() => {
+					setShowCard(false);
+				}}
+			/>
 			<img
 				className="card-image"
 				alt={movie.title + "poster"}

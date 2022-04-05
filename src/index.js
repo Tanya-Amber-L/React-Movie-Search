@@ -2,7 +2,7 @@ import "../src/index.css";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import SearchMovies from "./components/searchMovies";
-import MovieCard from "./components/movieCard";
+import MoviePreview from "./components/moviePreview";
 
 function App() {
 	const [movies, setMovies] = useState([]);
@@ -14,7 +14,7 @@ function App() {
 				{movies
 					.filter((movie) => movie.poster_path)
 					.map((movie) => (
-						<MovieCard movie={movie} />
+						<MoviePreview movie={movie} />
 					))}
 			</div>
 		</div>
