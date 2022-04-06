@@ -2,14 +2,14 @@ export default function MovieCard({ movie, setShowCard }) {
 	return (
 		<div className="card-container">
 			<div className="card" key={movie.id}>
-				<img
+				<div
 					className="card-close-btn"
-					alt="close card button"
-					src="../close.png"
 					onClick={() => {
 						setShowCard(false);
 					}}
-				/>
+				>
+					<img alt="close card button" src="../close.png" />
+				</div>
 				<img
 					className="card-img"
 					alt={movie.title + "poster"}
@@ -17,12 +17,14 @@ export default function MovieCard({ movie, setShowCard }) {
 				/>
 				<div className="card-content">
 					<h3 className="card-title">{movie.title}</h3>
-					<p className="card-release">
-						Release date: {movie.release_date}.
-					</p>
 					<p className="card-rating">
-						Rated {movie.vote_average} with {movie.vote_count}{" "}
-						votes.
+						<span>
+							{movie.vote_average} {"\u2605"}
+						</span>{" "}
+						({movie.vote_count} vote.s)
+					</p>
+					<p className="card-release">
+						Released : {movie.release_date}.
 					</p>
 					<p className="card-description">{movie.overview}</p>
 				</div>

@@ -20,7 +20,9 @@ export default function MoviePreview({ movie }) {
 				/>
 				<div className="preview-content">
 					<h3 className="preview-title">{movie.title}</h3>
-					<p className="preview-rating">{movie.vote_average}</p>
+					<p className="preview-rating">
+						{movie.vote_average} {"\u2605"}
+					</p>
 				</div>
 			</div>
 			{showCard ? (
