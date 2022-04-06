@@ -20,6 +20,7 @@
 -   [React](https://reactjs.org/)
 -   Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 -   [The Movie DB API](https://www.themoviedb.org)
+-   Star icon and favicon by Flaticon
 
 ### Features
 
@@ -55,7 +56,7 @@ $ npm run start
 
 ## Deploy
 
-[ToDo]()
+[Deployed on Netlify](https://react-moviesearch.netlify.app/)
 
 ## Contact
 
