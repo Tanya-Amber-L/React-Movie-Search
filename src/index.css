@@ -48,6 +48,13 @@ h1 {
   background: linear-gradient(var(--lighter-blue1), var(--lighter-blue2));
   color: var(--white);
 }
+.submit {
+  cursor: pointer;
+  transition: .5s;
+}
+.submit:hover {
+  background: linear-gradient(var(--lighter-blue2), var(--lighter-blue1));
+}
 
 /* ALL CARDS LIST */
 .card-list {
