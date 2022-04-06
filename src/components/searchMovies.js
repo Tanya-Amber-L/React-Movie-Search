@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import ErrorMessage from "./errorMessage";
 import fetchMovies, { fetchPopular } from "./fetch";
 
 export default function SearchMovies({ setMovies }) {
@@ -9,6 +8,7 @@ export default function SearchMovies({ setMovies }) {
 	useEffect(() => {
 		fetchPopular(setMovies);
 	}, [query, setMovies]);
+
 	const searchMovies = async (e) => {
 		e.preventDefault();
 		if (query === "") {

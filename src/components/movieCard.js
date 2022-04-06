@@ -1,11 +1,6 @@
 export default function MovieCard({ movie, setShowCard }) {
 	return (
-		<div
-			className="card-container"
-			onClick={() => {
-				setShowCard(false);
-			}}
-		>
+		<div className="card-container">
 			<div className="card" key={movie.id}>
 				<div
 					className="card-close-btn"
