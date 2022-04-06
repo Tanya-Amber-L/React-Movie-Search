@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import SearchMovies from "./components/searchMovies";
 import MoviePreview from "./components/moviePreview";
+// require("dotenv").config();
 
 function App() {
 	const [movies, setMovies] = useState([]);
