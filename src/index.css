@@ -38,7 +38,7 @@ h1 {
   text-align: center;
 }
 .input {
-  margin-right: 1rem;
+  margin: 0 1rem 1rem 0;
   width: 200px;
 }
 .submit, .input {
@@ -149,6 +149,11 @@ h1 {
 .card-description {
   padding: 1rem 0;
   font-size: 1.3rem;
+}
+
+/* ERROR SPAN */
+.error {
+  color: red;
 }
 
 @media screen and (min-width: 360px) {
